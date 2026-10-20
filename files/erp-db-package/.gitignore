@@ -1,0 +1,32 @@
+# secrets
+.env
+.env.*
+!.env.example
+server/.env
+client/.env
+# dependencies / build output
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+# logs
+logs/
+*.log
+npm-debug.log*
+# private uploads and generated files
+server/private-uploads/
+private-uploads/
+uploads/
+exports/
+*.csv.tmp
+# local databases / dumps
+data/db/
+*.dump
+*.bson
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/

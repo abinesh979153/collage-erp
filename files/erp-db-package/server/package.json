@@ -1,0 +1,3 @@
+{"name":"college-erp-server-db","private":true,"version":"0.1.0","type":"module","engines":{"node":">=20"},
+"scripts":{"db:check":"node scripts/db-check.js","db:indexes":"node scripts/sync-indexes.js","seed":"node src/seed/seed.js","seed:reset":"node src/seed/seed.js --reset","test":"node --test tests/"},
+"dependencies":{"argon2":"^0.40.3","dotenv":"^16.4.5","mongoose":"^8.5.0"}}
