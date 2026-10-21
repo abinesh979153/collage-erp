@@ -28,9 +28,26 @@ app.use('/api/courses', require('./modules/courses/courses.routes'));
 app.use('/api/enrollments', require('./modules/enrollments/enrollments.routes'));
 app.use('/api/attendance', require('./modules/attendance/attendance.routes'));
 app.use('/api/grades', require('./modules/grades/grades.routes'));
+app.use('/api/timetable', require('./modules/timetable/timetable.routes'));
+app.use('/api/assignments', require('./modules/assignments/assignments.routes'));
+app.use('/api/submissions', require('./modules/submissions/submissions.routes'));
 app.use('/api/faculty-course-assignments', require('./modules/faculty-course-assignments/faculty-course-assignments.routes'));
 app.use('/api/departments', require('./modules/departments/departments.routes'));
 app.use('/api/analytics', require('./modules/analytics/analytics.routes'));
+
+app.use('/api/calendar-events', require('./modules/calendar-events/calendar-events.routes'));
+
+app.use('/api/library', require('./modules/library/library.routes'));
+
+app.use('/api/fees', require('./modules/fees/fees.routes'));
+app.use('/api/announcements', require('./modules/announcements/announcements.routes'));
+app.use('/api/notifications', require('./modules/notifications/notifications.routes'));
+
+app.use('/api/documents', require('./modules/documents/documents.routes'));
+
+app.use('/api/tickets', require('./modules/tickets/tickets.routes'));
+
+app.use('/api/reports', require('./modules/reports/reports.routes'));
 
 app.use(notFound);
 app.use(errorHandler);

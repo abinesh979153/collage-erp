@@ -27,10 +27,17 @@ export async function api(path, { method = 'GET', body, params, blob } = {}) {
 
   if (!res.ok) {
     const data = await res.json().catch(() => ({}));
+    const message =
+      data.message || data.error?.message || `Request failed (${res.status})`;
+    const details = data.error?.details;
+    const detailMessage = Array.isArray(details)
+      ? details.map(item => `${item.path || 'field'}: ${item.message}`).join('; ')
+      : '';
     const error = new Error(
-      data.message || data.error?.message || `Request failed (${res.status})`
+      detailMessage ? `${message} — ${detailMessage}` : message
     );
     error.status = res.status;
+    error.details = details;
     throw error;
   }
 

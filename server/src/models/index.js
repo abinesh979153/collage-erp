@@ -9,4 +9,5 @@ module.exports = {
   Enrollment: require('./Enrollment'),
   Attendance: require('./Attendance'),
   Grade: require('./Grade'),
+  Submission: require('./Submission'),
 };
